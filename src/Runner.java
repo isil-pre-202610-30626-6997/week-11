@@ -1,9 +1,12 @@
+
 public class Runner {
 
     private int id;
     private String name;
     private double recordTime;
-    
+    private double qualificationTime;
+    private double raceTime;
+
     public Runner(int id, String name, double recordTime) {
         this.id = id;
         this.name = name;
@@ -33,5 +36,26 @@ public class Runner {
     public void setRecordTime(double recordTime) {
         this.recordTime = recordTime;
     }
-    
+
+    public double getQualificationTime() {
+        return qualificationTime;
+    }
+
+    public void setQualificationTime(double qualificationTime) {
+        this.qualificationTime = qualificationTime;
+    }
+
+    public double getRaceTime() {
+        return raceTime;
+    }
+
+    public void setRaceTime(double raceTime) {
+        this.raceTime = raceTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + name + " - Personal record: " + String.format("%.2f", recordTime);
+    }
+
 }
