@@ -5,10 +5,10 @@ import java.util.List;
 
 public class Competition {
 
-    private String name;
-    private double qualificationTime;
-    private List<Runner> runners;
-    private List<Runner> qualifiedRunners;
+    private final String name;
+    private final double qualificationTime;
+    private final List<Runner> runners;
+    private final List<Runner> qualifiedRunners;
 
     public Competition(String name, double qualificationTime) {
         this.name = name;
@@ -24,6 +24,8 @@ public class Competition {
     public void showRunners() {
 
         System.out.println("===================");
+        System.out.println(name);
+
         System.out.println("Runners");
         System.out.println("===================");
 
@@ -52,6 +54,7 @@ public class Competition {
 
     public void showQualificationTestResults() {
         System.out.println("===================");
+        System.out.println(name);
         System.out.println("Qualified runners");
         System.out.println("Time: " + qualificationTime);
 
@@ -83,6 +86,7 @@ public class Competition {
 
     public void showFinalRaceResults() {
         System.out.println("===================");
+        System.out.println(name);
         System.out.println("Final results");
         System.out.println("===================");
 
